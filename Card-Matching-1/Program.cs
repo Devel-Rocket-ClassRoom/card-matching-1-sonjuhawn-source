@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Threading;
 
 Card card = new Card();
@@ -8,6 +7,9 @@ card.Play();
 
 class Card
 {
+    Level cardlevel = new Level();
+    cardlevel
+
     public string[,] deck = new string[5, 5]
     {
         {"   ", "1열", "2열", "3열", "4열" },
@@ -18,8 +20,8 @@ class Card
     };
     bool[,] checkcard = new bool[5, 5];
 
-    public int trycount = 0;
-    public int successcount = 0;
+    int trycount = 0;
+    int successcount = 0;
 
     public void CardSuffle()
     {
@@ -169,5 +171,11 @@ class Card
                 }
             }
         }
+    }
+    public struct Level
+    {
+        public string ary;
+        public int level;
+        public int trynum;
     }
 }
