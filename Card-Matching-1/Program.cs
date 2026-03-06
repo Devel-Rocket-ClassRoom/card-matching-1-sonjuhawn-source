@@ -148,6 +148,7 @@ class Card
         {
             ShowCard();
             CheckCard();
+            Console.Clear();
 
             if (successcount == 8)
             {
